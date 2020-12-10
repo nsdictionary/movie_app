@@ -1,10 +1,19 @@
 import React from 'react';
-import PropTypes from "prop-types";
 
 class App extends React.Component {
   state = { count: 0 };
   add = () => this.setState(current => ({count: current.count + 1}));
   minus = () => this.setState(current => ({count: current.count - 1}));
+
+  componentDidMount() {
+    console.log("componentDidMount");
+  }
+  componentDidUpdate() {
+    console.log("componentDidUpdate");
+  }
+  componentWillUnmount() {
+    console.log("componentWillUnmount");
+  }
 
   render() {
     return (
